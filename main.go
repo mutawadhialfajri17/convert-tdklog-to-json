@@ -55,7 +55,7 @@ func main() {
 					currentLevel[key] = false
 				} else if num, err := strconv.ParseFloat(value, 64); err == nil {
 					currentLevel[key] = num
-				} else if json.Valid([]byte(value)) { // Also, check if the value is already a JSON array or object
+				} else if json.Valid([]byte(value)) { // also, check if the value is already a JSON array or object
 					var jsonValue interface{}
 					err := json.Unmarshal([]byte(value), &jsonValue)
 					if err != nil {

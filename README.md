@@ -2,7 +2,7 @@
 
 ### How to run
 - create file `metadata.log`
-- fill it with your log metadata (example: `metadata.log.example`)
+- fill it with your log metadata (example: [link](metadata.log.example))
 - running program
     ```bash
     go run main.go
