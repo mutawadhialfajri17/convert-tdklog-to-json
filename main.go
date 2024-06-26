@@ -27,6 +27,11 @@ func main() {
 	nestedMap := make(map[string]interface{})
 	lines := strings.Split(metadataStr, "\n")
 	for _, line := range lines {
+		// skip if found empty line or "Show less"
+		if line == "" || line == "Show less" {
+			continue
+		}
+
 		// split the line into key value
 		parts := strings.SplitN(line, ":", 2)
 		if len(parts) != 2 {
